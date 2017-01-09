@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5CCD5FC1E235EB200776318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FB1E235EB200776318 /* main.m */; };
+		F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FE1E235EB200776318 /* AppDelegate.m */; };
+		F5CCD6021E235EB200776318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6011E235EB200776318 /* ViewController.m */; };
+		F5CCD6051E235EB200776318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CCD6031E235EB200776318 /* Main.storyboard */; };
+		F5CCD6071E235EB200776318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CCD6061E235EB200776318 /* Assets.xcassets */; };
+		F5CCD60A1E235EB200776318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CCD6081E235EB200776318 /* LaunchScreen.storyboard */; };
+		F5CCD6151E235EB200776318 /* FRKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6141E235EB200776318 /* FRKitTests.m */; };
+		F5CCD6201E235EB200776318 /* FRKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD61F1E235EB200776318 /* FRKitUITests.m */; };
+		F5CCD6311E235F0B00776318 /* FRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6301E235F0B00776318 /* FRButton.m */; };
+		F5CCD6381E23648500776318 /* FRKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6371E23648500776318 /* FRKAlertView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5CCD6111E235EB200776318 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5CCD5EF1E235EB200776318 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5CCD5F61E235EB200776318;
+			remoteInfo = FRKit;
+		};
+		F5CCD61C1E235EB200776318 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5CCD5EF1E235EB200776318 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5CCD5F61E235EB200776318;
+			remoteInfo = FRKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5CCD5F71E235EB200776318 /* FRKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CCD5FB1E235EB200776318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5CCD5FD1E235EB200776318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5CCD5FE1E235EB200776318 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5CCD6001E235EB200776318 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5CCD6011E235EB200776318 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5CCD6041E235EB200776318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5CCD6061E235EB200776318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5CCD6091E235EB200776318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5CCD60B1E235EB200776318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CCD6101E235EB200776318 /* FRKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FRKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CCD6141E235EB200776318 /* FRKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRKitTests.m; sourceTree = "<group>"; };
+		F5CCD6161E235EB200776318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CCD61B1E235EB200776318 /* FRKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FRKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CCD61F1E235EB200776318 /* FRKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRKitUITests.m; sourceTree = "<group>"; };
+		F5CCD6211E235EB200776318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CCD62F1E235F0B00776318 /* FRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRButton.h; sourceTree = "<group>"; };
+		F5CCD6301E235F0B00776318 /* FRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRButton.m; sourceTree = "<group>"; };
+		F5CCD6361E23648500776318 /* FRKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRKAlertView.h; sourceTree = "<group>"; };
+		F5CCD6371E23648500776318 /* FRKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRKAlertView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5CCD5F41E235EB200776318 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD60D1E235EB200776318 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD6181E235EB200776318 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5CCD5EE1E235EB200776318 = {
+			isa = PBXGroup;
+			children = (
+				F5CCD5F91E235EB200776318 /* FRKit */,
+				F5CCD6131E235EB200776318 /* FRKitTests */,
+				F5CCD61E1E235EB200776318 /* FRKitUITests */,
+				F5CCD5F81E235EB200776318 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5CCD5F81E235EB200776318 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD5F71E235EB200776318 /* FRKit.app */,
+				F5CCD6101E235EB200776318 /* FRKitTests.xctest */,
+				F5CCD61B1E235EB200776318 /* FRKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5CCD5F91E235EB200776318 /* FRKit */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD5FD1E235EB200776318 /* AppDelegate.h */,
+				F5CCD5FE1E235EB200776318 /* AppDelegate.m */,
+				F5CCD6001E235EB200776318 /* ViewController.h */,
+				F5CCD6011E235EB200776318 /* ViewController.m */,
+				F5CCD62D1E235EEC00776318 /* FRCategory */,
+				F5CCD62E1E235EEC00776318 /* FRViews */,
+				F5CCD6321E23645A00776318 /* FRAnimation */,
+				F5CCD6031E235EB200776318 /* Main.storyboard */,
+				F5CCD6061E235EB200776318 /* Assets.xcassets */,
+				F5CCD6081E235EB200776318 /* LaunchScreen.storyboard */,
+				F5CCD60B1E235EB200776318 /* Info.plist */,
+				F5CCD5FA1E235EB200776318 /* Supporting Files */,
+			);
+			path = FRKit;
+			sourceTree = "<group>";
+		};
+		F5CCD5FA1E235EB200776318 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD5FB1E235EB200776318 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5CCD6131E235EB200776318 /* FRKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD6141E235EB200776318 /* FRKitTests.m */,
+				F5CCD6161E235EB200776318 /* Info.plist */,
+			);
+			path = FRKitTests;
+			sourceTree = "<group>";
+		};
+		F5CCD61E1E235EB200776318 /* FRKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD61F1E235EB200776318 /* FRKitUITests.m */,
+				F5CCD6211E235EB200776318 /* Info.plist */,
+			);
+			path = FRKitUITests;
+			sourceTree = "<group>";
+		};
+		F5CCD62D1E235EEC00776318 /* FRCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FRCategory;
+			sourceTree = "<group>";
+		};
+		F5CCD62E1E235EEC00776318 /* FRViews */ = {
+			isa = PBXGroup;
+			children = (
+				F5CCD62F1E235F0B00776318 /* FRButton.h */,
+				F5CCD6301E235F0B00776318 /* FRButton.m */,
+				F5CCD6361E23648500776318 /* FRKAlertView.h */,
+				F5CCD6371E23648500776318 /* FRKAlertView.m */,
+			);
+			path = FRViews;
+			sourceTree = "<group>";
+		};
+		F5CCD6321E23645A00776318 /* FRAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FRAnimation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5CCD5F61E235EB200776318 /* FRKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CCD6241E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKit" */;
+			buildPhases = (
+				F5CCD5F31E235EB200776318 /* Sources */,
+				F5CCD5F41E235EB200776318 /* Frameworks */,
+				F5CCD5F51E235EB200776318 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FRKit;
+			productName = FRKit;
+			productReference = F5CCD5F71E235EB200776318 /* FRKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5CCD60F1E235EB200776318 /* FRKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CCD6271E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitTests" */;
+			buildPhases = (
+				F5CCD60C1E235EB200776318 /* Sources */,
+				F5CCD60D1E235EB200776318 /* Frameworks */,
+				F5CCD60E1E235EB200776318 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5CCD6121E235EB200776318 /* PBXTargetDependency */,
+			);
+			name = FRKitTests;
+			productName = FRKitTests;
+			productReference = F5CCD6101E235EB200776318 /* FRKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5CCD61A1E235EB200776318 /* FRKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5CCD62A1E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitUITests" */;
+			buildPhases = (
+				F5CCD6171E235EB200776318 /* Sources */,
+				F5CCD6181E235EB200776318 /* Frameworks */,
+				F5CCD6191E235EB200776318 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5CCD61D1E235EB200776318 /* PBXTargetDependency */,
+			);
+			name = FRKitUITests;
+			productName = FRKitUITests;
+			productReference = F5CCD61B1E235EB200776318 /* FRKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5CCD5EF1E235EB200776318 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Smartisan;
+				TargetAttributes = {
+					F5CCD5F61E235EB200776318 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZQ5YNVEU2;
+						ProvisioningStyle = Automatic;
+					};
+					F5CCD60F1E235EB200776318 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZQ5YNVEU2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5CCD5F61E235EB200776318;
+					};
+					F5CCD61A1E235EB200776318 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZQ5YNVEU2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5CCD5F61E235EB200776318;
+					};
+				};
+			};
+			buildConfigurationList = F5CCD5F21E235EB200776318 /* Build configuration list for PBXProject "FRKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5CCD5EE1E235EB200776318;
+			productRefGroup = F5CCD5F81E235EB200776318 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5CCD5F61E235EB200776318 /* FRKit */,
+				F5CCD60F1E235EB200776318 /* FRKitTests */,
+				F5CCD61A1E235EB200776318 /* FRKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5CCD5F51E235EB200776318 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CCD60A1E235EB200776318 /* LaunchScreen.storyboard in Resources */,
+				F5CCD6071E235EB200776318 /* Assets.xcassets in Resources */,
+				F5CCD6051E235EB200776318 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD60E1E235EB200776318 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD6191E235EB200776318 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5CCD5F31E235EB200776318 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CCD6021E235EB200776318 /* ViewController.m in Sources */,
+				F5CCD6311E235F0B00776318 /* FRButton.m in Sources */,
+				F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */,
+				F5CCD5FC1E235EB200776318 /* main.m in Sources */,
+				F5CCD6381E23648500776318 /* FRKAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD60C1E235EB200776318 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CCD6151E235EB200776318 /* FRKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CCD6171E235EB200776318 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CCD6201E235EB200776318 /* FRKitUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5CCD6121E235EB200776318 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5CCD5F61E235EB200776318 /* FRKit */;
+			targetProxy = F5CCD6111E235EB200776318 /* PBXContainerItemProxy */;
+		};
+		F5CCD61D1E235EB200776318 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5CCD5F61E235EB200776318 /* FRKit */;
+			targetProxy = F5CCD61C1E235EB200776318 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5CCD6031E235EB200776318 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CCD6041E235EB200776318 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5CCD6081E235EB200776318 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5CCD6091E235EB200776318 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5CCD6221E235EB200776318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5CCD6231E235EB200776318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5CCD6251E235EB200776318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5CCD6261E235EB200776318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5CCD6281E235EB200776318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRKit.app/FRKit";
+			};
+			name = Debug;
+		};
+		F5CCD6291E235EB200776318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRKit.app/FRKit";
+			};
+			name = Release;
+		};
+		F5CCD62B1E235EB200776318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FRKit;
+			};
+			name = Debug;
+		};
+		F5CCD62C1E235EB200776318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DZQ5YNVEU2;
+				INFOPLIST_FILE = FRKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FRKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5CCD5F21E235EB200776318 /* Build configuration list for PBXProject "FRKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CCD6221E235EB200776318 /* Debug */,
+				F5CCD6231E235EB200776318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5CCD6241E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CCD6251E235EB200776318 /* Debug */,
+				F5CCD6261E235EB200776318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5CCD6271E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CCD6281E235EB200776318 /* Debug */,
+				F5CCD6291E235EB200776318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5CCD62A1E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5CCD62B1E235EB200776318 /* Debug */,
+				F5CCD62C1E235EB200776318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5CCD5EF1E235EB200776318 /* Project object */;
+}
