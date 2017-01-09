@@ -3,7 +3,7 @@
 //  FRKit
 //
 //  Created by xiushanfan on 09/01/2017.
-//  Copyright © 2017 Smartisan. All rights reserved.
+//  Copyright © 2017 frk. All rights reserved.
 //
 
 /* 

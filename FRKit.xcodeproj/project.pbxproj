@@ -17,6 +17,8 @@
 		F5CCD6201E235EB200776318 /* FRKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD61F1E235EB200776318 /* FRKitUITests.m */; };
 		F5CCD6311E235F0B00776318 /* FRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6301E235F0B00776318 /* FRButton.m */; };
 		F5CCD6381E23648500776318 /* FRKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6371E23648500776318 /* FRKAlertView.m */; };
+		F5CCD63C1E236CC600776318 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD63B1E236CC600776318 /* UIView+Debug.m */; };
+		F5CCD6401E236D5500776318 /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD63F1E236D5500776318 /* UIColor+Colours.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		F5CCD6301E235F0B00776318 /* FRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRButton.m; sourceTree = "<group>"; };
 		F5CCD6361E23648500776318 /* FRKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRKAlertView.h; sourceTree = "<group>"; };
 		F5CCD6371E23648500776318 /* FRKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRKAlertView.m; sourceTree = "<group>"; };
+		F5CCD63A1E236CC600776318 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		F5CCD63B1E236CC600776318 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		F5CCD63E1E236D5500776318 /* UIColor+Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colours.h"; sourceTree = "<group>"; };
+		F5CCD63F1E236D5500776318 /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,10 @@
 		F5CCD62D1E235EEC00776318 /* FRCategory */ = {
 			isa = PBXGroup;
 			children = (
+				F5CCD63A1E236CC600776318 /* UIView+Debug.h */,
+				F5CCD63B1E236CC600776318 /* UIView+Debug.m */,
+				F5CCD63E1E236D5500776318 /* UIColor+Colours.h */,
+				F5CCD63F1E236D5500776318 /* UIColor+Colours.m */,
 			);
 			path = FRCategory;
 			sourceTree = "<group>";
@@ -314,7 +324,9 @@
 				F5CCD6311E235F0B00776318 /* FRButton.m in Sources */,
 				F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */,
 				F5CCD5FC1E235EB200776318 /* main.m in Sources */,
+				F5CCD63C1E236CC600776318 /* UIView+Debug.m in Sources */,
 				F5CCD6381E23648500776318 /* FRKAlertView.m in Sources */,
+				F5CCD6401E236D5500776318 /* UIColor+Colours.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +478,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKit;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -478,7 +490,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKit;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -490,7 +502,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRKit.app/FRKit";
 			};
@@ -503,7 +515,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRKit.app/FRKit";
 			};
@@ -515,7 +527,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = FRKit;
 			};
@@ -527,7 +539,7 @@
 				DEVELOPMENT_TEAM = DZQ5YNVEU2;
 				INFOPLIST_FILE = FRKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Smartisan.FRKitUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = frank.FRKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = FRKit;
 			};
@@ -552,6 +564,7 @@
 				F5CCD6261E235EB200776318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5CCD6271E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +573,7 @@
 				F5CCD6291E235EB200776318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5CCD62A1E235EB200776318 /* Build configuration list for PBXNativeTarget "FRKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +582,7 @@
 				F5CCD62C1E235EB200776318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
