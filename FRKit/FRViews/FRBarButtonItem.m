@@ -17,7 +17,7 @@
 @implementation FRBarButtonItem
 
 - (id)initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style target:(id)target tapBlock:(BarBtnItemTapBlock)tBarBtnItemTapBlock {
-    self = [super initWithTitle:title style:style target:target action:@selector(tapBarBtn:)];
+    self = [super initWithTitle:title style:style target:self action:@selector(tapBarBtn:)];
     if (self) {
         barBtnItemTapBlock = [tBarBtnItemTapBlock copy];
     }

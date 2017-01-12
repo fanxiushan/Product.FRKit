@@ -10,6 +10,8 @@
 #import "FRButton.h"
 #import "FRKAlertView.h"
 #import "UIButton+Block.h"
+#import "FRBarButtonItem.h"
+#import "UINavigationItem+Position.h"
 
 @interface ViewController ()
 
@@ -19,17 +21,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    FRBarButtonItem *leftBtn = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello");
+    }];
+    FRBarButtonItem *leftBtn1 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello2");
+    }];
+    FRBarButtonItem *leftBtn2 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello3");
+    }];
+    self.navigationItem.pdd_leftBarButtonItems = @[leftBtn,leftBtn1,leftBtn2];
     
-    FRButton *frBtn = [FRButton buttonWithType:UIButtonTypeCustom];
-    frBtn.frame = CGRectMake(50, 50, 200, 60);
-    [frBtn setTitle:@"FRButton" forState:UIControlStateNormal];
-    [frBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    frBtn.touchUpSideTapBlock = ^(UIButton *btn){
-        NSLog(@"btn = %@ ",btn);
-    };
-    [self.view addSubview:frBtn];
-
-
+    
+    FRBarButtonItem *rightBtn = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello");
+    }];
+    FRBarButtonItem *rightBtn1 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello2");
+    }];
+    __weak __typeof(self)weakSelf = self;
+    FRBarButtonItem *rightBtn2 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
+        NSLog(@"hello3");
+        NSLog(@"WEAKSELF = %@",weakSelf.navigationItem.pdd_rightBarButtonItems);
+    }];
+    self.navigationItem.pdd_rightBarButtonItems = @[rightBtn,rightBtn1,rightBtn2];
     
 }
 
