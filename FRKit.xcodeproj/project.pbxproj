@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F558E5C31E251B5B0038DBAA /* FRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E5C21E251B5B0038DBAA /* FRBarButtonItem.m */; };
+		F558E5D21E262D4C0038DBAA /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E5D11E262D4C0038DBAA /* UIButton+Block.m */; };
 		F5CCD5FC1E235EB200776318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FB1E235EB200776318 /* main.m */; };
 		F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FE1E235EB200776318 /* AppDelegate.m */; };
 		F5CCD6021E235EB200776318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6011E235EB200776318 /* ViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F558E5C11E251B5B0038DBAA /* FRBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRBarButtonItem.h; sourceTree = "<group>"; };
+		F558E5C21E251B5B0038DBAA /* FRBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRBarButtonItem.m; sourceTree = "<group>"; };
+		F558E5D01E262D4C0038DBAA /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		F558E5D11E262D4C0038DBAA /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		F5CCD5F71E235EB200776318 /* FRKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CCD5FB1E235EB200776318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5CCD5FD1E235EB200776318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				F5CCD62D1E235EEC00776318 /* FRCategory */,
 				F5CCD62E1E235EEC00776318 /* FRViews */,
 				F5CCD6321E23645A00776318 /* FRAnimation */,
+				F5CCD6411E236E9500776318 /* FRViewUtils */,
 				F5CCD6031E235EB200776318 /* Main.storyboard */,
 				F5CCD6061E235EB200776318 /* Assets.xcassets */,
 				F5CCD6081E235EB200776318 /* LaunchScreen.storyboard */,
@@ -162,6 +169,8 @@
 				F5CCD63B1E236CC600776318 /* UIView+Debug.m */,
 				F5CCD63E1E236D5500776318 /* UIColor+Colours.h */,
 				F5CCD63F1E236D5500776318 /* UIColor+Colours.m */,
+				F558E5D01E262D4C0038DBAA /* UIButton+Block.h */,
+				F558E5D11E262D4C0038DBAA /* UIButton+Block.m */,
 			);
 			path = FRCategory;
 			sourceTree = "<group>";
@@ -173,6 +182,8 @@
 				F5CCD6301E235F0B00776318 /* FRButton.m */,
 				F5CCD6361E23648500776318 /* FRKAlertView.h */,
 				F5CCD6371E23648500776318 /* FRKAlertView.m */,
+				F558E5C11E251B5B0038DBAA /* FRBarButtonItem.h */,
+				F558E5C21E251B5B0038DBAA /* FRBarButtonItem.m */,
 			);
 			path = FRViews;
 			sourceTree = "<group>";
@@ -182,6 +193,13 @@
 			children = (
 			);
 			path = FRAnimation;
+			sourceTree = "<group>";
+		};
+		F5CCD6411E236E9500776318 /* FRViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FRViewUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +342,9 @@
 				F5CCD6311E235F0B00776318 /* FRButton.m in Sources */,
 				F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */,
 				F5CCD5FC1E235EB200776318 /* main.m in Sources */,
+				F558E5C31E251B5B0038DBAA /* FRBarButtonItem.m in Sources */,
 				F5CCD63C1E236CC600776318 /* UIView+Debug.m in Sources */,
+				F558E5D21E262D4C0038DBAA /* UIButton+Block.m in Sources */,
 				F5CCD6381E23648500776318 /* FRKAlertView.m in Sources */,
 				F5CCD6401E236D5500776318 /* UIColor+Colours.m in Sources */,
 			);
