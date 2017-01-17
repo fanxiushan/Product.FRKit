@@ -12,6 +12,7 @@
 #import "UIButton+Block.h"
 #import "FRBarButtonItem.h"
 #import "UINavigationItem+Position.h"
+#import "UIView+Debug.h"
 
 @interface ViewController ()
 
@@ -21,31 +22,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FRBarButtonItem *leftBtn = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello");
-    }];
-    FRBarButtonItem *leftBtn1 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello2");
-    }];
-    FRBarButtonItem *leftBtn2 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello3");
-    }];
-    self.navigationItem.pdd_leftBarButtonItems = @[leftBtn,leftBtn1,leftBtn2];
+
+    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 356)];
+    testLabel.font = [UIFont systemFontOfSize:15.0f];
+    testLabel.backgroundColor = [UIColor redColor];
+    testLabel.text = @"Hello world";
+    testLabel.adjustsFontSizeToFitWidth = YES;
     
     
-    FRBarButtonItem *rightBtn = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello");
-    }];
-    FRBarButtonItem *rightBtn1 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello2");
-    }];
-    __weak __typeof(self)weakSelf = self;
-    FRBarButtonItem *rightBtn2 = [[FRBarButtonItem alloc] initWithTitle:@"xxx" style:UIBarButtonItemStyleDone target:self tapBlock:^(UIBarButtonItem *item) {
-        NSLog(@"hello3");
-        NSLog(@"WEAKSELF = %@",weakSelf.navigationItem.pdd_rightBarButtonItems);
-    }];
-    self.navigationItem.pdd_rightBarButtonItems = @[rightBtn,rightBtn1,rightBtn2];
+    UILabel *testLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 90, 50)];
+    testLabel1.font = [UIFont systemFontOfSize:15.0f];
+    testLabel1.backgroundColor = [UIColor redColor];
+    testLabel1.text = @"Hello world";
+    testLabel1.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:testLabel1];
     
+    UILabel *testLabe2 = [[UILabel alloc] initWithFrame:CGRectMake(60, 100, 70, 50)];
+    testLabe2.font = [UIFont systemFontOfSize:15.0f];
+    testLabe2.backgroundColor = [UIColor redColor];
+    testLabe2.text = @"Hello world";
+    testLabe2.adjustsFontSizeToFitWidth = YES;
+    [testLabel1 addSubview:testLabe2];
+    [testLabel addSubview:testLabel1];
+    
+    [self.view addSubview:testLabel];
+    
+    testLabel.frk_debugMode = YES;
 }
 
 

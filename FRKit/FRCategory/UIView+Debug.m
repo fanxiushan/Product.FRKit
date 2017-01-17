@@ -46,6 +46,7 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
 - (void)setFrk_debugMode:(BOOL)frk_debugMode {
     NSNumber *debugNum = [NSNumber numberWithBool:frk_debugMode];
     [self frk_rescureChangeViewBGColor:self];
+    [self frk_rescurePrintViewFrame:self];
     objc_setAssociatedObject(self, frk_debugModeKey, debugNum, OBJC_ASSOCIATION_RETAIN);
 }
 
@@ -69,6 +70,33 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
         }
     }
     return nil;
+}
+
+- (UIView *)frk_rescurePrintViewFrame:(UIView *)tview {
+    if (tview.subviews.count > 0) {
+        for (UIView *tsView in tview.subviews) {
+            trackView = [self frk_rescurePrintViewFrame:tsView];
+        }
+    } else {
+        if (trackView == tview) {
+            [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
+            return nil;
+        } else {
+            [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
+            return tview;
+        }
+    }
+    [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
+    return nil;
+}
+
+- (UILabel *)debugLabelWithText:(NSString *)tText {
+    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    testLabel.font = [UIFont systemFontOfSize:8.0f];
+    testLabel.backgroundColor = [UIColor whiteColor];
+    testLabel.text = tText;
+    [testLabel sizeToFit];
+    return testLabel;
 }
 
 - (NSString *)frk_description {

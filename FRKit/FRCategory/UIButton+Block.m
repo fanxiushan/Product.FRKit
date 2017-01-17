@@ -3,7 +3,7 @@
 //  FRKit
 //
 //  Created by xiushanfan on 11/01/2017.
-//  Copyright © 2017 Smartisan. All rights reserved.
+//  Copyright © 2017 frank. All rights reserved.
 //
 
 #import "UIButton+Block.h"
