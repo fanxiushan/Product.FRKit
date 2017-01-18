@@ -47,7 +47,18 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
     NSNumber *debugNum = [NSNumber numberWithBool:frk_debugMode];
     [self frk_rescureChangeViewBGColor:self];
     [self frk_rescurePrintViewFrame:self];
+    [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     objc_setAssociatedObject(self, frk_debugModeKey, debugNum, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context {
+    //Won't the view addObserver again.
+    NSLog(@"UIView (Debug) keyPath = %@, object = %@, change = %@",keyPath,object,change);
+    CGRect rect1 = ((NSValue *)[change objectForKey:@"old"]).CGRectValue;
+    CGRect rect2 = ((NSValue *)[change objectForKey:@"new"]).CGRectValue;
+    if (NO == (CGRectContainsRect(rect1, rect2) && CGRectContainsRect(rect2, rect1))) {
+        [self frk_rescurePrintViewFrame:self];
+    }
 }
 
 - (BOOL)frk_debugMode {

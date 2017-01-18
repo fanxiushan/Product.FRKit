@@ -14,7 +14,9 @@
 #import "UINavigationItem+Position.h"
 #import "UIView+Debug.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    UILabel *testLabel;
+}
 
 @end
 
@@ -23,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 356)];
+    testLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 356)];
     testLabel.font = [UIFont systemFontOfSize:15.0f];
     testLabel.backgroundColor = [UIColor redColor];
     testLabel.text = @"Hello world";
@@ -48,8 +50,26 @@
     [self.view addSubview:testLabel];
     
     testLabel.frk_debugMode = YES;
+    [testLabel addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn.frame = CGRectMake(50, 50, 200, 100);
+    [btn addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitle:@"PressMe" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
 }
 
+- (void)btnPressed:(UIButton *)btn {
+    testLabel.frame = CGRectMake(200, 200, 200, 356);
+}
+
+
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context {
+    NSLog(@"ViewController keyPath = %@, object = %@, change = %@",keyPath,object,change);
+    CGRect rect1 = ((NSValue *)[change objectForKey:@"old"]).CGRectValue;
+    CGRect rect2 = ((NSValue *)[change objectForKey:@"new"]).CGRectValue;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
