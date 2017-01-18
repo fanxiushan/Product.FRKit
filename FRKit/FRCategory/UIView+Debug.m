@@ -55,39 +55,24 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
     return [debugNum boolValue];
 }
 
-- (UIView *)frk_rescureChangeViewBGColor:(UIView *)tview
-{
+- (void)frk_rescureChangeViewBGColor:(UIView *)tview {
     if (tview.subviews.count > 0) {
         for (UIView *tsView in tview.subviews) {
             tsView.backgroundColor = [UIColor randomColor];
-            trackView = [self frk_rescureChangeViewBGColor:tsView];
+            [self frk_rescureChangeViewBGColor:tsView];
         }
-    } else {
-        if (trackView == tview) {
-            return nil;
-        } else {
-            return tview;
-        }
+        tview.backgroundColor = [UIColor randomColor];
     }
-    return nil;
 }
 
-- (UIView *)frk_rescurePrintViewFrame:(UIView *)tview {
+- (void)frk_rescurePrintViewFrame:(UIView *)tview {
     if (tview.subviews.count > 0) {
         for (UIView *tsView in tview.subviews) {
-            trackView = [self frk_rescurePrintViewFrame:tsView];
+            [self frk_rescurePrintViewFrame:tsView];
+            [tsView addSubview:[self debugLabelWithText:NSStringFromCGRect(tsView.frame)]];
         }
-    } else {
-        if (trackView == tview) {
-            [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
-            return nil;
-        } else {
-            [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
-            return tview;
-        }
+        [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
     }
-    [tview addSubview:[self debugLabelWithText:NSStringFromCGRect(tview.frame)]];
-    return nil;
 }
 
 - (UILabel *)debugLabelWithText:(NSString *)tText {
