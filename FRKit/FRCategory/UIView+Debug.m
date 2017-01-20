@@ -16,7 +16,13 @@ static NSMutableString *level = nil;
 static NSMutableString *outputStr = nil;
 static NSString *markStr = @"*** ";
 
-static const char *frk_debugModeKey = "frk_viewDebug";
+static NSInteger trackRescureLevel = 0;
+static const NSInteger rescureLevel = 2;
+
+//not 'static const char *  frk_debugModeKey' & note 修饰顺序.
+static char * const frk_debugModeKey = "frk_viewDebug";
+static char * const observerFrameContext = "observerFrameContext";
+
 
 @implementation UIView (Debug)
 
@@ -38,16 +44,17 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
 
 + (void)initialize {
     //Warning you should not swizzle 'description' method, this will cause critical bug.
-//    SEL originSel = NSSelectorFromString(@"debugDescription");
-//    SEL targetSel = NSSelectorFromString(@"frk_description");
-//    frk_swizzle_method([self class], originSel, targetSel);
+    //    SEL originSel = NSSelectorFromString(@"debugDescription");
+    //    SEL targetSel = NSSelectorFromString(@"frk_description");
+    //    frk_swizzle_method([self class], originSel, targetSel);
 }
 
 - (void)setFrk_debugMode:(BOOL)frk_debugMode {
     NSNumber *debugNum = [NSNumber numberWithBool:frk_debugMode];
     [self frk_rescureChangeViewBGColor:self];
     [self frk_rescurePrintViewFrame:self];
-    [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    trackRescureLevel = 0;
+    [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:observerFrameContext];
     objc_setAssociatedObject(self, frk_debugModeKey, debugNum, OBJC_ASSOCIATION_RETAIN);
 }
 
@@ -58,6 +65,17 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
     CGRect rect2 = ((NSValue *)[change objectForKey:@"new"]).CGRectValue;
     if (NO == (CGRectContainsRect(rect1, rect2) && CGRectContainsRect(rect2, rect1))) {
         [self frk_rescurePrintViewFrame:self];
+    }
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (self.observationInfo && (newSuperview == nil)) {
+        NSString *pointer = [NSString stringWithFormat:@"%p",observerFrameContext];
+        NSString *obserVationInfo = [NSString stringWithFormat:@"%@",self.observationInfo];
+        NSRange range = [obserVationInfo rangeOfString:pointer];
+        if (range.length > 0) {
+            [self  removeObserver:self forKeyPath:@"frame" context:observerFrameContext];
+        }
     }
 }
 
@@ -77,6 +95,10 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
 }
 
 - (void)frk_rescurePrintViewFrame:(UIView *)tview {
+    if (trackRescureLevel > rescureLevel) {
+        return;
+    }
+    trackRescureLevel++;
     if (tview.subviews.count > 0) {
         for (UIView *tsView in tview.subviews) {
             [self frk_rescurePrintViewFrame:tsView];
@@ -126,3 +148,5 @@ void frk_swizzle_method(Class class,SEL originSel,SEL targetSel) {
 
 
 @end
+
+

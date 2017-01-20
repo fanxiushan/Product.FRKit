@@ -12,7 +12,7 @@
         <scene sceneID="ix6-Lq-QuS">
             <objects>
                 <navigationController id="Ow2-5b-P37" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="se4-YG-Esn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="se4-YG-Esn" customClass="FRKNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joY-Hz-WDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276" y="61"/>
+            <point key="canvasLocation" x="-1352" y="63"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

@@ -13,8 +13,8 @@
 #define kLeftRealBarBtnItemBaseTag          100
 #define kLeftGapBarBtnItemBaseTag           200
 
-const char *kPddLeftBarButtonItemsKey = "kPddLeftBarButtonItemsKey";
-const char *kPddRightBarButtonItemsKey = "kPddRightBarButtonItemsKey";
+static char * const kPddLeftBarButtonItemsKey = "kPddLeftBarButtonItemsKey";
+static char * const kPddRightBarButtonItemsKey = "kPddRightBarButtonItemsKey";
 
 @interface UINavigationItem() {
     
@@ -44,14 +44,12 @@ const char *kPddRightBarButtonItemsKey = "kPddRightBarButtonItemsKey";
         NSMutableArray *leftBarBtnItemArray = [NSMutableArray arrayWithCapacity:0];
         for (int i = 0; i < pdd_leftBarButtonItems.count; i++) {
             UIBarButtonItem *barBtnItem = [pdd_leftBarButtonItems objectAtIndex:i];
-            UIBarButtonItem *gapBarBtnItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
             if (0 == i) {
+                UIBarButtonItem *gapBarBtnItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
                 gapBarBtnItem.width = kLeftBarBtnLeftMargin;
-            } else {
-                gapBarBtnItem.width = kLeftBarBtnMiddleMargin;
+                //Note:the array sequence is important!!
+                [leftBarBtnItemArray addObject:gapBarBtnItem];
             }
-            //Note:the array sequence is important!!
-            [leftBarBtnItemArray addObject:gapBarBtnItem];
             [leftBarBtnItemArray addObject:barBtnItem];
         }
         self.leftBarButtonItems = leftBarBtnItemArray;
@@ -72,14 +70,12 @@ const char *kPddRightBarButtonItemsKey = "kPddRightBarButtonItemsKey";
     if (pdd_rightBarButtonItems) {
         for (int i = 0; i < pdd_rightBarButtonItems.count; i++) {
             UIBarButtonItem *barBtnItem = [pdd_rightBarButtonItems objectAtIndex:i];
-            UIBarButtonItem *gapBarBtnItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
             if (0 == i) {
+                UIBarButtonItem *gapBarBtnItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
                 gapBarBtnItem.width = kRightBarBtnRightMargin;
-            } else {
-                gapBarBtnItem.width = kRightBarBtnMiddleMargin;
+                //Note:the array sequence is important!!
+                [rightBarBtnItemArray addObject:gapBarBtnItem];
             }
-            //Note:the array sequence is important!!
-            [rightBarBtnItemArray addObject:gapBarBtnItem];
             [rightBarBtnItemArray addObject:barBtnItem];
         }
         self.rightBarButtonItems = rightBarBtnItemArray;

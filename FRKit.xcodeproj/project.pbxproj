@@ -11,6 +11,7 @@
 		F558E5D21E262D4C0038DBAA /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E5D11E262D4C0038DBAA /* UIButton+Block.m */; };
 		F569482C1E279AC1003DA68A /* UINavigationItem+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = F569482B1E279AC1003DA68A /* UINavigationItem+Position.m */; };
 		F58347731E2F157300308D01 /* UIView+More.m in Sources */ = {isa = PBXBuildFile; fileRef = F58347721E2F157300308D01 /* UIView+More.m */; };
+		F58347B71E32078100308D01 /* FRKNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F58347B61E32078100308D01 /* FRKNavigationBar.m */; };
 		F5CCD5FC1E235EB200776318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FB1E235EB200776318 /* main.m */; };
 		F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD5FE1E235EB200776318 /* AppDelegate.m */; };
 		F5CCD6021E235EB200776318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CCD6011E235EB200776318 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		F569482B1E279AC1003DA68A /* UINavigationItem+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Position.m"; sourceTree = "<group>"; };
 		F58347711E2F157300308D01 /* UIView+More.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+More.h"; sourceTree = "<group>"; };
 		F58347721E2F157300308D01 /* UIView+More.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+More.m"; sourceTree = "<group>"; };
+		F58347B51E32078100308D01 /* FRKNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRKNavigationBar.h; sourceTree = "<group>"; };
+		F58347B61E32078100308D01 /* FRKNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRKNavigationBar.m; sourceTree = "<group>"; };
 		F5CCD5F71E235EB200776318 /* FRKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CCD5FB1E235EB200776318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5CCD5FD1E235EB200776318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				F558E5D11E262D4C0038DBAA /* UIButton+Block.m */,
 				F569482A1E279AC1003DA68A /* UINavigationItem+Position.h */,
 				F569482B1E279AC1003DA68A /* UINavigationItem+Position.m */,
+				F58347B51E32078100308D01 /* FRKNavigationBar.h */,
+				F58347B61E32078100308D01 /* FRKNavigationBar.m */,
 			);
 			path = FRCategory;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				F5CCD6311E235F0B00776318 /* FRButton.m in Sources */,
 				F58347731E2F157300308D01 /* UIView+More.m in Sources */,
 				F5CCD5FF1E235EB200776318 /* AppDelegate.m in Sources */,
+				F58347B71E32078100308D01 /* FRKNavigationBar.m in Sources */,
 				F5CCD5FC1E235EB200776318 /* main.m in Sources */,
 				F558E5C31E251B5B0038DBAA /* FRBarButtonItem.m in Sources */,
 				F5CCD63C1E236CC600776318 /* UIView+Debug.m in Sources */,

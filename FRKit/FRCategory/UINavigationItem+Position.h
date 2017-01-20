@@ -13,11 +13,13 @@
 
 //The less,the lefter.
 #define kLeftBarBtnLeftMargin       -10
-#define kLeftBarBtnMiddleMargin     20
 
 //The less,the righter.
 #define kRightBarBtnRightMargin     -10
-#define kRightBarBtnMiddleMargin    10
+
+//Notice:this category work with PDNavigationBar to config the navigationItem.leftBarBtnItems&rightBarBtnItems's frame.
+//The 'UIBarButtonSystemItemFixedSpace' has minmum gap 8pix,no way to make the barBtnItem's middle gap more smaller.But it work perfect to config the navigationItem's right/left margin.
+
 
 @interface UINavigationItem (Position)
 
